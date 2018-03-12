@@ -2,7 +2,11 @@
 
 <header role="banner" class="Mrphs-headerLogo">
     <span class="Mrphs-headerLogo--institution"></span>
-    <span class="Mrphs-headerLogo--banner"></span>
 
-    #parse("/vm/morpheus/includeLoginNav.vm")
+    #if( !${loggedIn} )
+      #parse("/vm/morpheus/includeSignUpNav.vm")
+    #else
+      <span class="Mrphs-headerLogo--banner"></span>
+      #parse("/vm/morpheus/includeLoginNav.vm")
+
 </header>
