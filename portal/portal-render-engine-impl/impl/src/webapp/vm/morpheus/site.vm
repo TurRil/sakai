@@ -9,9 +9,9 @@
         <noscript>
             <span id="portal_js_warn" class="Mrphs-noJs js-warn-no-js">${rloader.sit_noscript_message}</span>
         </noscript>
-        
+
         #if ( ${bufferedResponse} && ${responseHead} )
-        #else 
+        #else
             ${sakai_html_head_js}
         #end ## END of IF ( ${bufferedResponse} && ${responseHead} )
 
@@ -35,7 +35,11 @@
             </div>
 
             #parse("/vm/morpheus/moresites.vm")
-            #parse("/vm/morpheus/includePageWithNav.vm")
+
+            #if( !${loggedIn} )
+              #parse("/vm/morpheus/includePage.vm")
+            #else
+              #parse("/vm/morpheus/includePageWithNav.vm")
 
         </div> <!-- end Mrphs-portalWrapper -->
         <!-- END VM site.vm -->
@@ -118,7 +122,7 @@
         #if ($loggedIn)
             <script src="$!{portalCDNPath}/portal/scripts/sessionstoragemanager.js$!{portalCDNQuery}"></script>
         #end ## END of IF ($loggedIn)
-        
+
         <!--[if lt IE 9]>
             <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
 <![endif]-->
@@ -179,7 +183,7 @@
 
             ${d}PBJQ(document).ready(function() {
                 setupSiteNav();
-                ## Moved IE aria label code to sakai.portal.ie.js // SAK-22308         
+                ## Moved IE aria label code to sakai.portal.ie.js // SAK-22308
             });
         </script>
 
@@ -198,7 +202,7 @@
                 }
             });
         }
-    #if ($userWarning) 
+    #if ($userWarning)
         ${d}PBJQ(document).ready(portal_check_pnotify);
     #end
         </script>
