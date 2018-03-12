@@ -24,7 +24,10 @@
 
                 ## Header
                 <div class="Mrphs-topHeader">
-                    #parse("/vm/morpheus/snippets/header-snippet.vm")
+                    #if (${loggedIn})
+                      #parse("/vm/morpheus/snippets/header-snippet.vm")
+                    #else
+                      #parse("/vm/morpheus/snippets/header-snippet-signup.vm")
                 </div>
 
                 #if (${tabsSites})
@@ -36,10 +39,10 @@
 
             #parse("/vm/morpheus/moresites.vm")
 
-            #if( !${loggedIn} )
-              #parse("/vm/morpheus/includePage.vm")
-            #else
+            #if (${loggedIn})
               #parse("/vm/morpheus/includePageWithNav.vm")
+            #else
+              #parse("/vm/morpheus/includePage.vm")
 
         </div> <!-- end Mrphs-portalWrapper -->
         <!-- END VM site.vm -->
