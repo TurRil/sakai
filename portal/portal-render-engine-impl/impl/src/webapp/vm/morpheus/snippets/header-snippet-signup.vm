@@ -1,10 +1,33 @@
-## Header that shows institution and/or banner logos
+## Header that shows institution with search field and sign-up button
 
 <header role="banner" class="Mrphs-headerLogo">
     <span class="Mrphs-headerLogo--institution"></span>
-    <span class="Mrphs-headerLogo--banner"></span>
 
-    <div>
-      <button>Sign Up</button>
+    <div class="Mrphs-headerLogo--banner">
+       <div class="search">
+          <input type="text" class="searchTerm" placeholder="Search for courses">
+          <button type="submit" class="searchButton">
+            <i class="fa fa-search"></i>
+         </button>
+       </div>
     </div>
+
+    <div class="Mrphs-headerLogo--quicklinks">
+        <a href="#">Courses</a>
+        <a href="#">Programs</a>
+        <a href="#">Degrees</a>
+    </div>
+
+    <nav id="mastLogin" class="Mrphs-loginNav">
+      <div id="loginLinksImage" class="Mrphs-loginUser" role="menu" tabindex="999">
+          <a href="#" title="Sign up" id="loginLink1" class="Mrphs-loginUser__message Mrphs-loginUser__signup" data-warning="">
+              <i class="login-Icon"></i>
+              <span class="Mrphs-login-Message">Sign up</span>
+          </a>
+          <a href="/portal/xlogin" title="Log in" id="loginLink2" class="Mrphs-loginUser__message">
+              <i class="login-Icon"></i>
+              <span class="Mrphs-login-Message">Log in</span>
+          </a>
+      </div>
+    </nav>
 </header>

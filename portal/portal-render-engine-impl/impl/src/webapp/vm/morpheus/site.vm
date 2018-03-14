@@ -28,6 +28,7 @@
                       #parse("/vm/morpheus/snippets/header-snippet.vm")
                     #else
                       #parse("/vm/morpheus/snippets/header-snippet-signup.vm")
+                    #end
                 </div>
 
                 #if (${tabsSites})
@@ -39,10 +40,12 @@
 
             #parse("/vm/morpheus/moresites.vm")
 
-            #if (${loggedIn})
+            #if( ${loggedIn} )
               #parse("/vm/morpheus/includePageWithNav.vm")
             #else
               #parse("/vm/morpheus/includePage.vm")
+              #parse("/vm/morpheus/snippets/footer-snippet-signup.vm")
+            #end
 
         </div> <!-- end Mrphs-portalWrapper -->
         <!-- END VM site.vm -->
