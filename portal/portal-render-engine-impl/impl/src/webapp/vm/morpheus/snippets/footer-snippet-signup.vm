@@ -1,0 +1,12 @@
+<footer id="signup">
+    <div id="copyright">
+        <p>&copy; University of Cape Town 2018. All rights reserved.</p>
+    </div>
+    <div id="social">
+        <p>Follow us on Social Media</p>
+        <a href="#"><i class="fa fa-facebook-square"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+        <a href="#"><i class="fa fa-twitter-square"></i></a>
+    </div>
+</footer>
