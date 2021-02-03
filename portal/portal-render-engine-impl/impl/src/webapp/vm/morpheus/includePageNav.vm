@@ -58,7 +58,13 @@
         <img src="${sitePages.pageNavIconUrl}" alt="" class="img_site_toolmenu">
 	#end
 
-	<div id="toolSubsitesContainer">
+    #if (${sitePages.isMyWorkspace})
+        <pre>
+            IS MY WORKSITE
+        </pre>
+    #end ## END of IF (${sitePages.isMyWorkspace})
+
+	<div id="toolSubsitesContainer"  ref="  >
 		<nav id="toolMenu" role="navigation" aria-label="${rloader.sit_toolshead}" class="Mrphs-toolsNav__menu">
 			<ul>
 			#set( $categoryMap = {})

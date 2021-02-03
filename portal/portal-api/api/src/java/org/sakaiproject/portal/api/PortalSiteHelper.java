@@ -94,7 +94,7 @@ public interface PortalSiteHelper
 	 */
 	Map<String, Object> pageListToMap(HttpServletRequest req, boolean loggedIn, Site site,
                         SitePage page, String toolContextPath, String portalPrefix, boolean doPages,
-                        boolean resetTools, boolean includeSummary);
+                        boolean resetTools, boolean includeSummary, boolean isMyWorkspaceSite);
 
 	Map<String, Object> convertSiteToMap(HttpServletRequest req, Site s, String prefix,
 			String currentSiteId, String myWorkspaceSiteId, boolean includeSummary,

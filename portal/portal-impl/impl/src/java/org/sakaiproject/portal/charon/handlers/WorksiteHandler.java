@@ -194,7 +194,8 @@ public class WorksiteHandler extends PageHandler
 					/* doPages */true,
 					/* resetTools */"true".equalsIgnoreCase(ServerConfigurationService
 							.getString(Portal.CONFIG_AUTO_RESET)),
-					/* includeSummary */false);
+                    /* includeSummary */false,
+                    /* isMyWorkspaceSite */ false);
  				rcontext.put("sitePages", pageMap);
 			}
 
